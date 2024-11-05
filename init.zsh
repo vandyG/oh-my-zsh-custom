@@ -1,6 +1,14 @@
 # Initialize starship prompt.
 eval "$(starship init zsh)"
 
+# Hook direnv to shell.
+eval "$(direnv hook zsh)"
+
+export PATH=$PATH:/usr/local/bin
+
+# Add node to path.
+export PATH="/home/linuxbrew/.linuxbrew/opt/node@22/bin:$PATH"
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/vandy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -15,3 +23,9 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# LiveTex add to path
+if [ -d "/usr/local/texlive/2024/bin/x86_64-linux" ] ; then
+    path+=("/usr/local/texlive/2024/bin/x86_64-linux")
+    export PATH
+fi
