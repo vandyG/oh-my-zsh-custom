@@ -6,6 +6,9 @@ eval "$(direnv hook zsh)"
 
 export PATH=$PATH:/usr/local/bin
 
+# Run rclone sync
+bash /home/vandy/work/rclone_sync.bash
+
 # Add node to path.
 export PATH="/home/linuxbrew/.linuxbrew/opt/node@22/bin:$PATH"
 
