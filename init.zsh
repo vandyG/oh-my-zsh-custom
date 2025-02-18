@@ -12,6 +12,9 @@ bash /home/vandy/work/rclone_sync.bash
 # Add node to path.
 export PATH="/home/linuxbrew/.linuxbrew/opt/node@22/bin:$PATH"
 
+# Add snap bin to path.
+export PATH=$PATH:/snap/bin
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/vandy/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
