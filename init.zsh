@@ -6,6 +6,9 @@ eval "$(direnv hook zsh)"
 
 export PATH=$PATH:/usr/local/bin
 
+# Bitwarden self signed cert.
+export NODE_EXTRA_CA_CERTS=~/.config/Bitwarden/certificate.crt
+
 # Run rclone sync
 bash /home/vandy/work/rclone_sync.bash
 
@@ -14,6 +17,9 @@ export PATH="/home/linuxbrew/.linuxbrew/opt/node@22/bin:$PATH"
 
 # Add snap bin to path.
 export PATH=$PATH:/snap/bin
+
+export PATH=$PATH:/usr/local/cuda-12.5/bin
+export PATH=$PATH:/home/vandy/.dotnet/tools
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
